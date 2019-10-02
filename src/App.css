@@ -1,22 +1,85 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
+  height: 50px;
+  background-color: #212529;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.logo-container{
+  color: #fed136;
+  font-family: 'Kaushan Script', cursive;
+  margin-left: 20px;
+  font-size: 1.25rem;
+}
+
+#button-container{
+  width: 500px;
+  display: flex;
+  align-content: center;
+  margin-right: 20px;
+  justify-content: space-between;
+}
+
+.button{
+  width: 80px;
+  text-align: center;
+  padding: 10px 0px;
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.nav-toggler{
+  font-size: 12px;
+  margin-right: 20px;
+  padding: 13px;
+  color: white;
+  background-color: #fed136;
+}
+
+img{
+  width: 100%;
+}
+
+.hide-animation{
+  animation-name: hide;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.show-animation{
+  animation-name: show;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+  0%{
+    height: 100px;
+  }
+  100%{
+    height: 0px;
+  }
+}
+
+@keyframes show {
+  0%{
+    height: 0px;
+  }
+  100%{
+    height: 100px;
+  }
+}
+
+@media (min-width: 750px){
+  .nav-toggler{
+    display: none;
+  }
+}
+
+@media (max-width: 750px){
+  #button-container{
+    display: none;
+  }
 }
